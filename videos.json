@@ -1,0 +1,19 @@
+{
+  "videos": [
+    {
+      "src": "Assets/demos/unity-demo.mp4",
+      "title": "Unity demo",
+      "description": "Full Unity-based rendering pipeline showing the VRM/glb avatar, facial animation, and immersive playback flow."
+    },
+    {
+      "src": "Assets/demos/web-demo-1.mp4",
+      "title": "Web demo 1",
+      "description": "Web-based Three.js demo showing the avatar response loop in the browser with real-time blendshape-driven animation."
+    },
+    {
+      "src": "Assets/demos/web-demo-2.mp4",
+      "title": "Web demo 2",
+      "description": "Second web demo highlighting the expressive avatar output, lip-sync timing, and visually synchronized motion."
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+body{font-family:Arial, Helvetica, sans-serif;margin:0;padding:0;color:#111}
+.nav{display:flex;gap:12px;padding:12px;background:linear-gradient(90deg,#ffffff,#f7f9fc);align-items:center;box-shadow:0 1px 0 rgba(0,0,0,0.04)}
+.nav a{color:#111;text-decoration:none;padding:8px 10px;border-radius:6px}
+.nav a:hover{background:#eef3ff}
+.toggle-btn{margin-left:auto;background:#0b5fff;color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+.toggle-btn:hover{opacity:0.95}
+.header{padding:28px 28px 24px;background:linear-gradient(180deg,#fff,#fbfdff);border-bottom:1px solid #f0f4f8;text-align:center}
+.header h1{margin:0 auto;max-width:1100px;font-size:2.55rem;line-height:1.4;letter-spacing:0.02em;font-weight:300}
+.authors{margin-top:12px;color:#444;font-size:0.92rem;line-height:1.45;display:flex;flex-direction:column;align-items:center;gap:2px}
+.authors p{margin:0;max-width:1100px}
+.authors p:first-child{font-size:1.02rem;font-weight:600;color:#222}
+.authors p:nth-child(2){font-size:0.93rem}
+.authors p:nth-child(3){font-size:0.9rem;letter-spacing:0.02em}
+.authors p:nth-child(4){font-size:0.88rem}
+.content-section{padding:22px;max-width:1100px;margin:0 auto}
+/* Demo carousel styles */
+.demo-carousel{display:flex;align-items:center;justify-content:center;gap:12px;position:relative;max-width:1000px;margin:0 auto;perspective:1200px}
+.carousel-slot{display:flex;flex-direction:column;align-items:center;justify-content:center;transition:transform 420ms cubic-bezier(.2,.9,.2,1),opacity 300ms ease;transform-origin:center center;min-width:0}
+.slot-left,.slot-right{width:12%;flex-shrink:0;}
+.slot-center{width:70%;flex-shrink:0;}
+.slot-left video,.slot-right video{width:100%;height:auto;border-radius:6px;opacity:0.95;cursor:pointer}
+.slot-center video{width:100%;height:auto;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.25);}
+
+/* Coverflow transforms */
+.slot-left{transform: translateX(0) rotateY(0) scale(0.72);opacity:0.6}
+.slot-right{transform: translateX(0) rotateY(0) scale(0.72);opacity:0.6}
+.slot-center{transform: translateX(0) rotateY(0) scale(1);opacity:1}
+
+.carousel-slot:hover{filter:brightness(1.02)}
+
+.demo-info{max-width:900px;margin:18px auto 0;text-align:center}
+.demo-info h3{margin:0 0 8px;font-size:1.1rem}
+.demo-info p{margin:0;color:#444;line-height:1.6}
+
+@media (max-width:900px){.slot-left,.slot-right{width:8%}.slot-center{width:80%}.nav-btn{padding:8px}}
+.nav-btn{position:absolute;background:#fff;border:1px solid #ddd;padding:10px 14px;border-radius:6px;cursor:pointer;font-size:18px;top:50%;transform:translateY(-50%)}
+.nav-btn.left{left:10px}
+.nav-btn.right{right:10px}
+.nav-btn:hover{background:#f0f0f0}
+@media (max-width:900px){.slot-left,.slot-right{width:8%}.slot-center{width:80%}.nav-btn{padding:8px}}
+
+/* Small layout tweaks for architecture images */
+.arch-images{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+.arch-images figure{max-width:520px;margin:0}
+.arch-images figcaption{font-size:0.9rem;color:#444;text-align:center;margin-top:6px}
+
+/* Footer */
+.footer{padding:18px;background:#fafafa;border-top:1px solid #eee;margin-top:30px;text-align:center}
+
+/* Dark mode */
+:root{--bg:#ffffff;--text:#111}
+body{background:var(--bg);color:var(--text)}
+.dark body{background:#0f1724;color:#e6eef8}
+.dark .nav{background:linear-gradient(90deg,#0b1220,#0b1628);box-shadow:0 1px 0 rgba(255,255,255,0.06)}
+.dark .nav a{color:#cfe1ff}
+.dark .nav a:hover{background:#1b2942}
+.dark .toggle-btn{background:#d1d9ff;color:#0b1220}
+.dark .header{background:linear-gradient(180deg,#0b1220,#081323);border-bottom:1px solid rgba(255,255,255,0.08)}
+.dark .authors{color:#b8c7e6}
+.dark .content-section{background:transparent;color:#e6eef8}
+.dark .content-section h2,.dark .content-section p,.dark .content-section li{color:#e6eef8}
+.dark .demo-info h3,.dark .demo-info p{color:#e6eef8}
+.dark .arch-images figcaption{color:#b8c7e6}
+.dark .footer{background:#0b1220;border-top:1px solid rgba(255,255,255,0.08);color:#cfd9ea}
+.dark .footer a{color:#9ec5ff}
+.dark .nav-btn{background:#182235;border-color:#31425f;color:#e6eef8}
+.dark .nav-btn:hover{background:#24314a}
+.dark .slot-left video,.dark .slot-right video{opacity:0.75}
+.dark .slot-center video{box-shadow:0 10px 30px rgba(0,0,0,0.5)}
